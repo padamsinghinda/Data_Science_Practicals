@@ -1,0 +1,65 @@
+Chi-Square Test is used to test the independence of two categorical variables.
+
+The chi-square test statistic is calculated by using the formula: 
+χ2=∑((O−E)**2)/E
+where O represents the observed frequency and E is represents the expected frequency under the null hypothesis.
+
+It is computed by : 
+E=(row total×column total)/sample size
+
+We will compare the value of the test statistic to the critical value of χα2 with degree of freedom = (r - 1) (c - 1), and reject the null hypothesis if χ2>χα2.
+
+To check that gender and education level dependent at 5% level of significance or 
+to know that there a relationship between the gender of an individual and the level of education,
+we need to followw below steps :
+
+Step-1)
+Consider Null/Alternative Hypothesis :
+Null Hypothesis: The two categorical variables are independent.
+Alternative Hypothesis: The two categorical variables are dependent.
+
+Step-2)
+Summarizing two categorical variables(denoting gender) within a below mentioned two-way table, also called a r × c contingency table, 
+where r = number of rows, c = number of columns.
+
+ 	   | High School| Bachelors	| Masters | Ph.d. | Total |
+Female |    60	    |   54	    |   46	  |  41	  |  201  |
+-----------------------------------------------------------
+Male   |    40	    |   44	    |   53	  |  57	  |  194  |
+-----------------------------------------------------------
+Total  |   100	    |   98	    |   99	  |  98	  |  395  |
+-----------------------------------------------------------
+
+Here's the table of expected counts:
+
+ 	   | High School| Bachelors	| Masters | Ph.d.  | Total |
+Female |  50.886    | 49.868    |  50.377 | 49.868 |  201  |
+------------------------------------------------------------
+Male   |  49.114    | 48.132    |  48.623 | 48.132 |  194  |
+------------------------------------------------------------
+Total  |   100	    |   98	    |   99	  |  98	   |  395  |
+------------------------------------------------------------
+
+
+So using observed and expected values mentioned in the above tables :
+χ2=∑((O−E)**2)/E
+χ2=((60−50.886)**2)/50.886 + ((54−49.868)**2)/49.868 + ((46−50.377)**2)/50.377 + ((41−49.868)**2)/49.868 + 
+   ((40−49.114)**2)/49.114 + ((44−48.132)**2)/48.132 + ((53−48.623)**2)/48.623 + ((57−48.132)**2)/48.132
+  =8.006
+  
+Step-3)
+critical value of χ2 with using chi-square distribution table :
+
+Calculate Degree of freedom :
+DF = (r-1)*(c-1) = (4-1)*(3-1) = 3 (where r = number of rows in table & c = number of columns in the table)
+α = 0.05
+
+χα2 = 7.81 (As per the f-distribution table for the given α = 0.05 and DF = 3)
+
+Step-6)
+Conclusion :
+As per step-5, χ2 = 8.006
+As per step-5, χα2 = 7.81
+
+Since χ2 > χα2, 
+therefore we reject the null hypothesis and conclude that the education level depends on gender at a 5% level of significance.

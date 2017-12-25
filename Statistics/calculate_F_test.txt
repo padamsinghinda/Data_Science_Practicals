@@ -1,0 +1,44 @@
+F test is used to compare the variances of the given datasets.
+
+In the given scenario :
+DataSet1(DS1) = [10, 20,30,40,50]
+DataSet2(DS2) = [5, 10, 15, 20, 25]
+
+Steps to calculate F-test :
+step-1) Calculate Mean
+step-2) Calculate standard deviation
+step-3) Calculate Variance
+step-4) Calculate F-test
+
+Formulla's :
+If x1,x2...xn are n numbers in a given dataset.
+Then,
+Mean(M) = (x1+x2...xn)/n
+SD      = sqrt(((x1-M)**2 + (x2-M)**2 + .... + (xn-M)**2)/(n-1)), Here sqrt denotes square root
+Variance = SD**2
+
+Now let's evaluate DataSet1(DS1) & DataSet2(DS2) to calculate the F-test.
+
+For DataSet1(DS1),
+step-1) 
+Mean(DS1) = (10+20+30+40+50)/5 = 30
+Mean(DS2) = (5+10+15+20+25)/5 = 15
+
+step-2)
+SD(DS1) = sqrt((((10-30)**2) + ((20-30)**2) + ((30-30)**2) + ((40-30)**2) + ((50-30)**2)) / (5-1)) = sqrt(1000/4)
+        = sqrt(250)
+
+SD(DS2) = sqrt((((5-15)**2) + ((10-15)**2) + ((15-15)**2) + ((20-15)**2) + ((25-15)**2)) / (5-1)) = sqrt(250/4)
+        = sqrt(62.5)
+		
+step-3)
+Variance(DS1) = sqrt(250)**2 = 250
+Variance(DS2) = sqrt(62.5)**2 = 62.5
+
+step-4)
+F-test = Variance(DS1) / Variance(DS2)
+       = 250/62.5 = 4
+	   
+So F-test for given datasets is 4.
+
+

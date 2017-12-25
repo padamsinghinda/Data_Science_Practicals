@@ -1,0 +1,101 @@
+ANOVA(analysis of variance)
+---------------------------
+Inputs :
+α = 0.05
+
+[Group1: 51, 45, 33, 45, 67] 
+[Group2: 23, 43, 23, 43, 45] 
+[Group3: 56, 76, 74, 87, 56]
+
+confidence interval (C) = 1 - α = 1 - 0.05 = 0.95 (95%)
+
+Solution :
+Step-1)
+The hypotheses of interest in an ANOVA are as follows:
+
+H0(Null Hypothesis): μ1 = μ2 = μ3
+H1(Alternate Hypothesis) : Means are not all equal
+
+Step-2) 
+Calculate degree of freedom and F-factor :
+Degree of freedom between group (DFB) : m-1 = 3-1 = 2 (m = number of groups)
+Degree of freedom within groups (DFW) : n-m = 15-3 = 12 (n = total number of values, m = number of groups)
+Degree of freedom total (DFT) : m.n-1 = 5*3 - 1 = 14 (DFT can also be calculated as sum of DFW & DFB)
+
+F-factor(2,12) = 3.89 (Here DFB,DFW ~ DF numerator,DF denominator)
+                 This calculation is done using the F-distribution table using the input parameters α, DFB & DFW.
+
+Step-3)
+Analysis of variance:
+
+Calculate M1,M2,M3(Mean of each group) :
+M1 = (51+45+33+45+67)/5 = 48.2
+M2 = (23+43+23+43+45)/5 = 35.4
+M3 = (56+76+74+87+56)/5 = 69.8
+
+Calculate mean of all values (M) :
+M = = (M1 + M2 + M3)/3 = (48.2 + 35.4 + 69.8)/3 = 51.13
+
+Calculate SST (sum of squares total) :
+   SST = (x11- M)**2 + (x12- M)**2 + (x13- M)**2 + (x14- M)**2 + (x15- M)**2 + 
+         (x21- M)**2 + (x22- M)**2 + (x23- M)**2 + (x24- M)**2 + (x25- M)**2 + 
+         (x31- M)**2 + (x32- M)**2 + (x33- M)**2 + (x34- M)**2 + (x35- M)**2
+		 
+   where x11 -> Group1 first value
+         x12 -> Group1 second value
+		 .
+		 .
+		 x35 -> Group3 fifth value
+		 
+		 and
+		 M is mean of all the elements.
+		 
+	After substituting values of all these parameters :							 
+	SST = (51-51.13)**2 + (45-51.13)**2 + (33-51.13)**2 + (45-51.13)**2 + (67-51.13)**2 + 
+	      (23-51.13)**2 + (43-51.13)**2 + (23-51.13)**2 + (43-51.13)**2 + (45-51.13)**2 + 
+	      (56-51.13)**2 + (76-51.13)**2 + (74-51.13)**2 + (87-51.13)**2 + (56-51.13)**2
+		= 0.017777778 + 37.61777778 + 328.8177778 + 37.61777778 + 251.7511111 + 
+		  791.4844444 + 66.15111111 + 791.4844444 + 66.15111111 + 37.61777778 + 
+		  23.68444444 + 618.3511111 + 522.8844444 + 1286.417778 + 23.68444444
+		= 655.8222222 + 1752.888889 + 2475.022222
+    SST = 4883.733333
+	
+Calculate SSW =>   
+   SSW = (x11- M1)**2 + (x12- M1)**2 + (x13- M1)**2 + (x14- M1)**2 + (x15- M1)**2 + 
+         (x21- M2)**2 + (x22- M2)**2 + (x23- M2)**2 + (x24- M2)**2 + (x25- M2)**2 + 
+         (x31- M3)**2 + (x32- M3)**2 + (x33- M3)**2 + (x34- M3)**2 + (x35- M3)**2
+   
+   where x11 -> Group1 first value, x12 -> Group1 second value, .... x35 -> Group3 fifth value and
+   		 M1, M2 & M3 are the mean of Group1, Group2 & Group3 respectively.
+
+	SSW  = (51-48.2)**2 + (45-48.2)**2 + (33-48.2)**2 + (45-48.2)**2 + (67-48.2)**2 + 
+	       (23-35.4)**2 + (43-35.4)**2 + (23-35.4)**2 + (43-35.4)**2 + (45-35.4)**2 + 
+	       (56-69.8)**2 + (76-69.8)**2 + (74-69.8)**2 + (87-69.8)**2 + (56-69.8)**2		   
+	     = 7.84 + 10.24 + 231.04 + 10.24 + 353.44 +
+	       153.76 + 57.76 + 153.76 + 57.76 + 92.16 + 
+	       190.44 + 38.44 + 17.64 + 295.84 + 190.44       
+     	 = 612.8 + 515.2 + 732.8
+		 = 1860.8
+		
+Calculate SSB =>  
+SSB = SST - SSW = 4883.733333 - 1860.8 = 3022.933333
+
+Step-4)
+Calculate Mean squared values :
+MSB = SSB/DFB = 3022.933333/2 = 1511.466667
+MSW = SSW/DFW = 1860.8/12 = 155.0666667
+
+Step-5)
+Calculate F test statistics :
+F-test_statistics = MSB/MSW = 1511.466667/155.0666667 = 9.7472055
+
+Step-6)
+Conclusion :
+As per step-2,
+F-factor(2,12) = 3.89
+
+As per step-5,
+F-test_statistics = 9.7472055
+
+Here, F-factor(2,12) < F-test_statistics
+So Null Hypothesis(H0) is rejected.

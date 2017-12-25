@@ -1,0 +1,72 @@
+============== Problem#1 ============
+Binomial probability distribution formulla is : n.c.k * p^k * (1-p)^(n-k)
+where n is total number of trials/occurance
+k is total number of success in n occurance
+p is the probability of success
+
+In the given scenario,
+n = 20
+k = 5
+p = (1/4) = 0.25
+1-p = (1-1/4) = (3/4) = 0.75
+n-k = 20-5 = 15
+
+After substituting all the parameters in the binomial distribution formulla,
+Probability of the 5 wrong answers can be calculated as below  :
+ => 20.c.15 * (0.25)^15 * (0.75)^5
+ =>(20*19*18*17*16/5*4*3*2*1) * (0.25)^15 * (0.75)^5
+ => 1860480/120 * 0.00000000093 * 0.237
+ => 15504 * 0.00000000093 * 0.237
+ => 0.0000034 approx
+ 
+So probability of answering the exactly 5 questions wrong in the test is :
+0.0000034 (approximately)
+
+============== Problem#2 ============
+Binomial probability distribution formulla is : n.c.k * p^k * (1-p)^(n-k)
+where n is total number of trials/occurance
+k is total number of success in n occurance
+p is the probability of success
+
+In the given scenario,
+n = 50
+k = 5
+p = (1/5) = 0.2
+1-p = (1-1/5) = (4/5) = 0.8
+n-k = 50-5 = 45
+
+After substituting all the parameters in the binomial distribution formulla,
+Probability of the 5 wrong answers can be calculated as below  :
+ => 50.c.5 * (0.2)^5 * (0.8)^45
+ =>(50*49*48*47*46/5*4*3*2*1) * (0.2)^5 * (0.8)^45
+ => 254251200/120
+ => 2118760 * 0.00032 * 0.00004356
+ => 0.0295 approx
+ 
+So probability of getting getting a “D” exactly 5 times with a die marked A to E which is rolled 50 times is :
+0.0295 (approximately)
+
+============== Problem#3 ============
+Binomial probability distribution formulla is : n.c.k * p^k * (1-p)^(n-k)
+where n is total number of trials/occurance
+k is total number of success in n occurance
+p is the probability of success
+
+In the given scenario,
+n = 20
+k = 5
+p = (1/4) = 0.25
+1-p = (1-1/4) = (3/4) = 0.75
+n-k = 20-5 = 15
+
+After substituting all the parameters in the binomial distribution formulla,
+Probability of the 5 wrong answers can be calculated as below  :
+ => 20.c.15 * (0.25)^15 * (0.75)^5
+ =>(20*19*18*17*16/5*4*3*2*1) * (0.25)^15 * (0.75)^5
+ => 1860480/120 * 0.00000000093 * 0.237
+ => 15504 * 0.00000000093 * 0.237
+ => 0.0000034 approx
+ 
+So probability of answering the exactly 5 questions wrong in the test is :
+0.0000034 (approximately)
+============================================

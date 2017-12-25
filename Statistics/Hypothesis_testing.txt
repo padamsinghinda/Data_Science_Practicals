@@ -1,0 +1,48 @@
+Step 1: 
+Null hypothesis: H0: μ=100
+
+Step 2: 
+Alternate hypothesis: H1: μ>100
+
+Step 3: 
+Set up the significance level (α) -
+Significant level (α) is not given in the problem so we meed to assume it as standard which is 5% (0.05).
+So α = 0.05
+
+Step 4: 
+Z-score calculation using Z table -
+
+confidence interval (C) = 1 - α
+                        = 1 - 0.05
+					    = 0.95 ( 95%)
+					   
+A z-score for above mentioned confidence interval (0.95) is 1.645.
+
+Step 5: 
+Test statistic using Z score formula:
+z score formula = (x-μ)/(σ/√n)
+				   where x -> Sample mean
+						 μ -> Population mean
+						 σ -> Population standard deviation
+						 n -> Sample size
+						 
+
+Using the above formula,
+z = (108-100)/(15/√36)
+  = 3.20
+
+Step 6: Acceptence/rejection of null hypothesis -
+If test statistics using z score formula(step 5) is greater than z score calculation done using z table (step 4), 
+then we will reject the null hypothesis.
+
+Here, Test statistics using z score formula is 3.20 (step 5) 
+which is greater than 1.645 (z score calculation done using z table - step 4)
+So we will reject null hypothesis i.e. there is raw cornstarch effect..
+
+
+Note :
+We can also use below steps to accept/reject the null hypothesis.
+Find the probability by looking at z- table and p-value associated with z-score 3.20 is 0.9993 
+i.e. probability of having value less than 108 is 0.9993 and more than or equals to 108 is (1-0.9993)=0.0007.
+Since probability(0.0007) is less than 0.05 so we will reject the Null hypothesis i.e. there is raw cornstarch effect.
+

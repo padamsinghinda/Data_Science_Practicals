@@ -1,0 +1,37 @@
+Z-score is used to know the number of standard deviations from the mean value of the reference population.
+
+A z-score tells where the score lies on a normal distribution curve. 
+For example,
+A z-score of zero tells that the value is exactly average while a score of (+/-)3 tells that the value is much higher than average.
+
+Step-1 =>
+z-score calculation formula :
+z-score = (x-μ)/(σ)
+where x -> Sample value
+      μ -> Population mean
+      σ -> Population standard deviation
+	  
+In the given example,
+x = 1100
+μ = 1026
+σ = 209
+
+Substitute all parameter in the Z-score formula :
+z = (1100-1026)/209
+  = 74/209
+  = 0.354 (approx)
+
+
+Step-2 =>
+Using the z-score table,
+p-value correponding to z-score 0.354 is 0.1368
+
+The z-table shown has scores for the RIGHT of the mean. 
+Therefore, we have to add .500 for all of the area LEFT of the mean.
+
+So p-value = 0.5000 + 0.1368 = 0.6368 (63.68 %)
+
+Step-3)
+Conclusions :
+1. Value 1100 is 0.354 standard deviation above the population mean 1026.
+2. 63.38% values are less than 1100 in the population.
