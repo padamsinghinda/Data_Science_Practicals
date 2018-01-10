@@ -1,2 +1,2 @@
-# Data_Science_Practicles
-Data_Science_Practicles
+# Data_Science_Practicals
+Data_Science_Practicals
